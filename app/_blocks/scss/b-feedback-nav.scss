@@ -1,0 +1,40 @@
+@import "_variables";
+
+.b-feedback-nav {
+  $s: &;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__prev,
+  &__next {
+    padding: 15px 60px;
+    border-radius: $br-main;
+    background-color: $major-light;
+    color: $major;
+
+    &:hover {
+      background-color: $major;
+      color: white;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__count {
+    margin-bottom: 15px;
+
+    span:nth-child(1) {
+      color: $major;
+    }
+  }
+}

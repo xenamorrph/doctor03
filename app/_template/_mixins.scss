@@ -1,0 +1,17 @@
+@mixin fem($fontSize, $parentFontSize){
+	font-size: $fontSize / $parentFontSize * 1em;
+}
+@mixin lg($clr1: rgba(0,0,0,0.3), $clr2: rgba(0,0,0,0.0)){
+	background-image: -webkit-linear-gradient(to top, $clr1, $clr2);
+	background-image: -moz-linear-gradient(to top, $clr1, $clr2);
+	background-image: -ms-linear-gradient(to top, $clr1, $clr2);
+	background-image: -o-linear-gradient(to top, $clr1, $clr2);
+	background-image: linear-gradient(to top, $clr1, $clr2);
+}
+@mixin left-grad($clr1: rgba(0,0,0,0.5), $clr2: rgba(0,0,0,0.0)){
+	background-image: -webkit-linear-gradient(to left, $clr1, $clr2);
+	background-image: -moz-linear-gradient(to left, $clr1, $clr2);
+	background-image: -ms-linear-gradient(to left, $clr1, $clr2);
+	background-image: -o-linear-gradient(to left, $clr1, $clr2);
+	background-image: linear-gradient(to left, $clr1, $clr2);
+}

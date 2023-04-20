@@ -1,0 +1,135 @@
+@import "_variables";
+
+.b-main-intro {
+  position:relative;
+  background-color: $major;
+  height: 460px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 70px;
+    margin-right: -100px;
+    background: $major-dark;
+    border-radius: 0 0 200px 0;
+  }
+  
+  &__swiper {
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    max-width: 1460px;
+    margin:0 auto;
+    width:100%;
+    height: 100%;
+    padding:0 15px;
+    
+    @media all and (max-width:$breakpoint4){
+      padding:0 10px;
+    }
+  }
+
+  .swiper-slide {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    position: relative;
+    max-width: 57%;
+    padding: 75px 15px 90px 0;
+    border-radius: 0 0 200px 0;
+    min-height: 210px;
+
+    a {
+      color: white;
+    }
+
+    a.button {
+      display: inline-block;
+    }
+  }
+
+   &__text {
+    color: white;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 65px;
+  }
+
+
+  &__image {
+    margin-top: auto;
+    picture {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    picture img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  &__button--prev,
+  &__button--next {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border: none;
+    border-radius: 50%;
+    background-color: $major;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $minor;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 0;
+      height: 0;
+      background-color: inherit;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
+  }
+
+  &__button--prev::before {
+    border-right: 30px solid white;
+    left: 45%;
+    transform: translate(-50%, -45%);
+  }
+
+  &__button--next::before {
+    left: 55%;
+    transform: translate(-50%, -55%);
+    border-left: 30px solid white;
+  }
+}

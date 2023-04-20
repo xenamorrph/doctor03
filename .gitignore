@@ -1,0 +1,8 @@
+prod
+dev
+prod_html
+*.js.map
+node_modules
+app/src/img/sprite.svg
+app/_template/scss/sprite.svg
+*.idea/

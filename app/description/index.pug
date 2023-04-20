@@ -1,0 +1,17 @@
+extends /_template/tpl/main
+block head
+	title Главная
+	link(rel="stylesheet" href="/css/template.css")
+	link(rel="stylesheet" href="style.css")
+
+	script(src="/_template/js/script.js" type="text/javascript")
+	script(src="script.js" type="text/javascript")
+
+block content
+
+	include /_blocks/pug/b-description
+	include /_blocks/pug/b-additional
+	include /_blocks/pug/b-list
+	include /_blocks/pug/b-advantages
+	include /_blocks/pug/b-callback
+	include /_blocks/pug/b-addresses

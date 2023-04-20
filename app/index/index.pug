@@ -1,0 +1,28 @@
+extends /_template/tpl/main
+block head
+	title Главная
+	link(rel="stylesheet" href="/css/template.css")
+	link(rel="stylesheet" href="style.css")
+	script(src="/_template/js/script.js" type="text/javascript")
+
+	
+	script(src="/src/js/libs/fslightbox/fslightbox.js" type="text/javascript")
+	link(rel="stylesheet" href="/src/js/libs/swiper/swiper-bundle.min.css")
+	script(src="/src/js/libs/swiper/swiper-bundle.min.js" type="text/javascript" )
+	script(src="script.js" type="text/javascript")
+	
+block content
+	include /_blocks/pug/b-main-intro
+	include /_blocks/pug/b-main-ambulances
+	include /_blocks/pug/b-main-article
+	include /_blocks/pug/b-main-advantages
+	include /_blocks/pug/b-main-services
+	include /_blocks/pug/b-additional
+	include /_blocks/pug/b-gallery
+	include /_blocks/pug/b-main-publications
+	include /_blocks/pug/b-callback
+	include /_blocks/pug/b-addresses
+	
+	
+	
+	

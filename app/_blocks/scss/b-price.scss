@@ -1,0 +1,124 @@
+@import "_variables";
+
+.b-price {
+  $s: &;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__container {
+    background-color: $major-lightest;
+    border-radius: $br-main;
+    padding: 30px;
+
+    &:hover {
+      background-color: $minor-lightest;
+
+      #{$s}__button {
+        background-color: $minor;
+      }
+
+      #{$s}__icon img {
+        filter: hue-rotate(195deg) brightness(105%);
+      }
+    
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px
+  }
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-size: 26px;
+      font-weight: bold;
+      margin-right: 25px;
+    }
+  }
+
+  &__icon {
+    margin-right: 25px;
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  &__button {
+    padding: 15px 65px;
+  }
+
+  &__table {
+    
+    table {
+      width: 100%;
+    }
+
+    tr:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+      font-weight: bold;
+      font-size: 18px;
+      padding: 15px 0;
+    }
+    
+    td {
+      padding: 15px 0;
+      vertical-align: top;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    td:nth-child(1),
+    th:nth-child(1) {
+      width: 85%;
+    }
+
+    td:nth-child(2),
+    th:nth-child(2) {
+      text-align: right;
+    }
+
+    tr:last-child td {
+      vertical-align: bottom;
+    }
+  }
+
+  ul {
+    padding-left: 20px;
+    padding-top: 20px;
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 14px;
+    background-color: white;
+    border-radius: $br-main;
+    margin-top: 30px;
+  }
+
+  &__icon--info {
+    img {
+      max-width: 28px;
+      max-height: 28px;
+    }
+  } 
+
+}

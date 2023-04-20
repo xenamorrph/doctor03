@@ -1,0 +1,16 @@
+section.b-callback
+  .container
+    .b-callback__container
+      .b-callback__content
+        .b-callback__title.text
+          h2 Остались вопросы?
+          span Закажите обратный звонок
+        form(action="" method="POST").b-callback__form
+          .b-callback__input-name
+            input(type="text" name="name" placeholder="Ваше имя")
+          .b-callback__input-tel
+            input(type="tel" placeholder="Ваш номер телефона")
+          .b-callback__agreement Нажимая на кнопку, вы даете согласие на <a href="#"> обработку своих персональных данных</a>
+          button(type="submit").b-callback__button Вызвать скорую помощь
+      .b-callback__image
+        img(src="/i/b-callback-plus.svg")

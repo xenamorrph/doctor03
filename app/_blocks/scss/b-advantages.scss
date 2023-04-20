@@ -1,0 +1,35 @@
+@import "_variables";
+
+.b-advantages {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    font-size: $font-size_h2m;
+    margin-bottom: 35px;
+  }
+
+  &__items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  &__item {
+    width: 23%;
+    padding: 30px;
+    border-radius: $br-main;
+    background-color: $major-light;
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"prod":{
+		"path": {
+			"server": "/local/templates/smc_new/build/prod/"
+		},
+		"exclude":{}
+	},
+	"dev":{
+		"path": {
+			"server": "/local/templates/smc_new/build/prod/"
+		}
+	}
+}

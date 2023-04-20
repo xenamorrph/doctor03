@@ -1,0 +1,94 @@
+@import "_variables";
+
+.b-gallery {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+  &__title {
+    font-size: $font-size_h2m;
+    margin-bottom: 35px;
+  }
+  
+  &__container {
+    position: relative;
+    background-color: $major-light;
+    border-radius: $br-main;
+    padding: 45px 70px;
+  }
+
+  &__swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: block;
+    min-width: 300px;
+    min-height: 300px;
+
+    &:not(:nth-last-child(1)) {
+      margin-right: 25px;
+    }
+  
+    picture img {
+      border-radius: $br-main;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__swiper-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -100%);
+    padding: 0 20px;
+  }
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+      position: relative;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+
+      &::before {
+        transition: 0.2s;
+        content: "";
+        position: absolute;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+      }
+    }
+
+  &__swiper-button-prev {
+    &::before {
+      border-right: 20px solid $major;
+    }
+    &:hover::before {
+      border-right: 20px solid $minor;
+    }
+  }
+
+  &__swiper-button-next {
+    right: 20px; 
+    &::before {
+      border-left: 20px solid $major;
+    }
+    &:hover::before {
+      border-left: 20px solid $minor;
+    }
+  }
+  
+  
+  
+}

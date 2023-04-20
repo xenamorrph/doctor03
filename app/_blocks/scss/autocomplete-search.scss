@@ -1,0 +1,175 @@
+@import "_variables";
+
+.autocomplete-search{
+	position: relative;
+
+	input{
+		display: block;
+		border:none;
+		width:100%;
+		border-radius: $br3;
+		line-height: 36px;
+		padding:0 40px 0 20px;
+	}
+	&__row{
+		box-shadow:0px 2px 4px rgba(22, 84, 69, 0.15);
+		border-radius: $br3;
+		overflow: hidden;
+		background: #fff;
+	}
+	&__result{
+		position: absolute;
+		top:0;
+		left:0;
+	}
+	&__loading{
+		display: none;
+		position: absolute;
+		top:50%;
+		right:9px;
+		margin:-12px 0 0 -12px;
+	    -webkit-animation: loading 2s infinite linear;
+	    -moz-animation: loading 2s infinite linear;
+	    animation: loading 2s infinite linear;
+
+		img{
+			display: block;
+		}
+	}
+	&__lupe{
+		position: absolute;
+		top:50%;
+		right:10px;
+		width:18px;
+		height:18px;
+		margin:-9px 0 0 -9px;
+		background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE3Ljg5IDE2LjgzbC0zLjk1NS0zLjk1NmMtLjcyNC0uNzI0LS43NTMtMS44NjktLjMyNy0yLjhhNy4wNjcgNy4wNjcgMCAwMC42NDItMi45NDlDMTQuMjUgMy4xOTYgMTEuMDU0IDAgNy4xMjUgMEE3LjEzMyA3LjEzMyAwIDAwMCA3LjEyNWE3LjEzMyA3LjEzMyAwIDAwNy4xMjUgNy4xMjVjMS4wNTIgMCAyLjA1LS4yMyAyLjk1LS42NDIuOTMtLjQyNiAyLjA3NS0uMzk3IDIuOC4zMjdsMy45NTUgMy45NTVhLjM3NS4zNzUgMCAwMC41MyAwbC41My0uNTNhLjM3NS4zNzUgMCAwMDAtLjUzek03LjEyNSAxMi43NUE1LjYzMSA1LjYzMSAwIDAxMS41IDcuMTI1IDUuNjMxIDUuNjMxIDAgMDE3LjEyNSAxLjVhNS42MzEgNS42MzEgMCAwMTUuNjI1IDUuNjI1IDUuNjMxIDUuNjMxIDAgMDEtNS42MjUgNS42MjV6IiBmaWxsPSIjM0I5NjcwIi8+PC9zdmc+") 50% 50% no-repeat;
+	}
+}
+
+
+.autocomplete-group{
+	/*background: #ECECEC;*/
+	border-top:1px solid #F9F9F9;
+	border-bottom:1px solid #F9F9F9;
+	color:#ccc;
+	padding:7px 15px 7px 50px;
+	font-size:14px;
+}
+.autocomplete-search{
+	position: relative;
+}
+@media all and (max-width:768px){
+	.services .autocomplete-search{
+		display: none!important;
+	}
+}
+.autocomplete-input{
+	padding: 30px 0 30px 70px;
+	
+    /*background-color: #e5e5e5;*/
+    border:2px solid #FFD500;
+}
+
+.autocomplete-lupe {
+	width: 42px;
+	height: 100%;
+	background: none;
+	border: none;
+	position: absolute;
+	top: 0%;
+	left: 2%;
+	padding:0;
+	margin:0;
+	font-size: 20px;
+	color: #333;
+}
+.autocomplete-lupe-icon{
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin:-8px -6px 0 0px;
+	width:16px;
+
+}
+.autocomplete-lupe-icon svg{
+	width:100%;
+	height:100%;
+}
+.autocomplete-loading {
+	position: absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	width:60px;
+	display: none;
+}
+.autocomplete-loading:before {
+	position: absolute;
+	top:50%;
+	right:10px;
+	height:32px;
+	width:32px;
+	margin-top:-16px;
+	content:'';
+	background:url('/img/loading.svg') no-repeat;
+	background-size: auto 100%;
+    -webkit-animation: loading 2s infinite linear;
+    -moz-animation: loading 2s infinite linear;
+    animation: loading 2s infinite linear;
+}
+.autocomplete-suggestions { 
+	border: 1px solid $clr1; 
+	border-top:none; 
+	background: #FFF; 
+	overflow: auto; 
+	box-sizing: border-box; 
+	box-shadow:0 5px 5px rgba(0,0,0,0.3);
+	top: 46px;
+    left: 0px;
+    border-radius: 5px;
+}
+.autocomplete-suggestion {cursor: pointer; padding: 7px 15px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: bold; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+
+
+@-webkit-keyframes loading {
+	0%{
+	    -webkit-transform: rotateZ(0deg);
+	    -moz-transform: rotateZ(0deg);
+	    transform: rotateZ(0deg);
+	}
+	100%{
+	    -webkit-transform: rotateZ(360deg);
+	    -moz-transform: rotateZ(360deg);
+	    transform: rotateZ(360deg);
+	}
+}
+@-moz-keyframes loading {
+	0%{
+	    -webkit-transform: rotateZ(0deg);
+	    -moz-transform: rotateZ(0deg);
+	    transform: rotateZ(0deg);
+	}
+	100%{
+	    -webkit-transform: rotateZ(360deg);
+	    -moz-transform: rotateZ(360deg);
+	    transform: rotateZ(360deg);
+	}
+}
+
+@keyframes loading {
+	0%{
+	    -webkit-transform: rotateZ(0deg);
+	    -moz-transform: rotateZ(0deg);
+	    transform: rotateZ(0deg);
+	}
+	100%{
+	    -webkit-transform: rotateZ(360deg);
+	    -moz-transform: rotateZ(360deg);
+	    transform: rotateZ(360deg);
+	}
+}

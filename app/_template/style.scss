@@ -1,0 +1,194 @@
+@import "variables";
+
+:focus, input, img {
+	outline: none;
+}
+
+a img {border: none;}
+strong {font-weight: bold;}
+
+p {
+	margin:18px 0;
+
+	&:empty {
+		display:none;
+	}
+}
+
+.button {
+	background-color: $major;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: $br-main;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $minor;
+		transition: 0.2s;
+	}
+}
+
+textarea,
+select,
+input[type=text]{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+	font-family: 'OpenSans', sans-serif;
+}
+
+button{
+	font-family: 'OpenSans', sans-serif;
+}
+
+a {
+	color: $major;
+
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+html,
+body{
+	font-size:16px;
+	font-family: 'OpenSans', sans-serif;
+	font-weight: 400;
+	color:#232323;
+	height:100%;
+	min-width: 320px!important;
+	background: #fff;
+
+	@media all and (max-width:$breakpoint4){
+		font-size:14px;
+	}
+}
+
+.wrapper{
+	transition:0.2s;
+	height: 100%;
+
+	&.alert-message &__box{
+		padding:206px 0 0;
+	}
+	&__box{
+		min-height: 100%;
+		overflow: hidden;
+		// padding:166px 0 0;
+	}
+	@media all and (max-width: 1450px){
+		&.alert-message &__box{
+			padding:180px 0 0;
+		}
+		&__box{
+			// padding:140px 0 0;
+		}
+	}
+	@media all and (max-width:$breakpoint2){
+		&.alert-message &__box{
+			padding:140px 0 0;
+		}
+		&__box{
+			padding:100px 0 0;
+		}
+	}
+	@media all and (max-width:$breakpoint3){
+		&.alert-message &__box{
+			padding:120px 0 0;
+		}
+		&__box{
+			padding:90px 0 0;
+		}
+	}
+	@media all and (max-width:$breakpoint4){
+		&.alert-message &__box{
+			padding:167px 0 0;
+		}
+		&__box{
+			padding:131px 0 0;
+		}
+	}
+	@media all and (max-width:$breakpoint5){
+		&.alert-message &__box{
+			padding:203px 0 0;
+		}
+	}
+}
+
+.container{
+	position: relative;
+	max-width: 1460px;
+	margin:0 auto;
+	width:100%;
+	padding:0 15px;
+
+	@media all and (max-width:$breakpoint4){
+		padding:0 10px;
+	}
+}
+
+.bold,
+span.bold,
+div.bold{
+	display: inline;
+	font-weight: 800;
+}
+
+
+
+.hidden{
+	display: none!important;
+}
+
+.anchor{
+	position: relative;
+	display: block;
+	width:100%;
+	height:0;
+	top:-120px;
+	visibility: hidden;
+}
+
+.page-title-1 {
+	font-size: 46px;
+	font-weight: bold;
+	line-height: normal;
+	margin:0 0 30px;
+
+	@media all and (max-width:$breakpoint4){
+		font-size:38px;
+	}
+}
+
+h2.page-title-2,
+.page-title-2{
+	font-size:28px;
+	font-weight: 400;
+	margin:0 0 30px;
+	line-height: 120%;
+
+	@media all and (max-width:$breakpoint4){
+		font-size:20px;
+		line-height: normal;
+		margin:0 0 20px;
+	}
+	@media all and (max-width:$breakpoint5){
+		&__small{
+			font-size: 16px;
+		}
+	}
+}
+
+.form-success{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	color:inherit;
+	font-size:24px;
+	font-weight: bold;
+	text-align: center;
+	height: 300px;
+}

@@ -1,0 +1,59 @@
+@import "_variables";
+
+.b-description-2 {
+  $s: &;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    font-size: $font-size_h2;
+    margin-bottom: 35px;
+  }
+
+  &__container {
+    background-color: $major-lightest;
+    border-radius: $br-main;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    padding: 40px 0 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-right: 35px;
+
+    #{$s}__button {
+      padding: 10px 90px;
+      display: flex;
+      align-self: flex-start;
+      margin-top: auto;
+      background-color: $minor;
+      border-radius: $br-main;
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $major;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: flex-end;
+    flex-shrink: 0;
+
+    picture img {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      border-radius: $br-main;
+    }
+  }
+}

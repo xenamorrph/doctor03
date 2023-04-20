@@ -1,0 +1,59 @@
+@import "_variables";
+
+.b-doctors-1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    font-size: $font-size_h2m;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 35px;
+  }
+
+  &__item {
+    padding: 20px 20px 30px 20px;
+    background-color: $major-lightest;
+    border-radius: $br5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: inherit;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: $minor-lightest;
+    }
+  }
+
+  &__photo {
+    margin-bottom: 15px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: brightness(70%);
+    }
+  }
+
+  &__name,
+  &__post {
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__post {
+    font-size: 14px;
+    margin-top: auto;
+  }
+}

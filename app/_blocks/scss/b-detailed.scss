@@ -1,0 +1,81 @@
+@import "_variables";
+
+.b-detailed {
+  $s: &;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  &__item {
+    background-color: $major-lightest;
+    border-radius: $br-main;
+    padding: 30px;
+    display: flex;
+
+    &:hover {
+      transition: 0.2s;
+      background-color: $minor-lightest;
+
+      #{$s}__icon {
+        background-color: $minor;
+      }
+
+      #{$s}__button {
+        background-color: $minor;
+      }
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    background-color: $major;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 50px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    padding: 10px 25px;
+    align-self: flex-start;
+    background-color: $major;
+    color: #fff;
+    font-weight: bold;
+    border-radius: $br-main;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

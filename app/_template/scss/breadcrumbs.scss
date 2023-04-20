@@ -1,0 +1,137 @@
+@import "_variables.scss";
+
+@mixin l-grad($major: rgba(0,0,0,0.5), $minor: rgba(0,0,0,0.0)){
+	background-image: -webkit-linear-gradient(to left, $major, $minor);
+	background-image: -moz-linear-gradient(to left, $major, $minor);
+	background-image: -ms-linear-gradient(to left, $major, $minor);
+	background-image: -o-linear-gradient(to left, $major, $minor);
+	background-image: linear-gradient(to left, $major, $minor);
+}
+
+.breadcrumbs{
+	width:100%;
+	display: block;
+	position:relative;
+	margin:0 auto 5px;
+	z-index: 5;
+	background: #fff;
+	color:#B1B1B1;
+	font-weight: 500;
+	font-size:12px;
+
+	&__wrap{
+		display: flex;
+		height: 40px;
+		width:100%;
+		align-items:center;
+	}
+	ul#{&}__list{
+		display: block;
+		margin:0;
+		padding:0;
+	}
+	&__home{
+		display: inline-block;
+		text-decoration: none;
+		vertical-align: middle;
+
+		&:before{
+			display: none;
+		}
+	}
+	&__item{
+		display: inline-block;
+		text-decoration: none;
+		vertical-align: middle;
+
+		&:last-child{
+			text-decoration: none;
+		}
+	}
+	&__current{
+		display: inline-block;
+		color:$major;
+		font-weight:bold;
+
+		&:before{
+			display: inline-block;
+			margin:0 5px 0 3px;
+			color:#B1B1B1;
+			content:'/';
+			position: relative;
+			font-weight: normal;
+		}
+	}
+	&__link{
+		display: block;
+		text-decoration: inherit;
+		font:inherit;
+		color:inherit;
+		text-decoration: none;
+		vertical-align: middle;
+
+		&:hover{
+			text-decoration: underline;
+		}
+		&:before{
+			display: inline-block;
+			margin:0 5px 0 3px;
+			content:'/';
+			position: relative;
+		}
+		&_home:before{
+			display: none;
+		}
+	}
+	&__current,
+	&__home,
+	&__item{
+		font-size:12px;
+	}
+	@media all and (max-width:$breakpoint4){
+		&:after,
+		&:before{
+			position: absolute;
+			top:0;
+			bottom:0;
+			width:15px;
+			content:'';
+			z-index: 1;
+		}
+		&:before{
+			left:0;
+			@include l-grad(rgba(255,255,255,0.0), rgba(255,255,255,1));
+		}
+		&:after{
+			right:0;
+			@include l-grad(rgba(255,255,255,1), rgba(255,255,255,0));
+		}
+
+		&__wrap{
+			overflow-x:scroll;
+			overflow-y:hidden;
+			position: relative;
+
+		}
+		.container{
+			padding:0;
+		}
+		ul#{&}__list{
+			display:block;
+			white-space: nowrap;
+			position: relative;
+			z-index: 0;
+			height:auto;
+			padding:20px 15px;
+			li{
+				display: inline-block;
+				position: relative;
+				z-index: 1;
+
+				&:last-child{
+					padding-right:15px;
+				}
+			}
+		}
+	}
+}

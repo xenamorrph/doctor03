@@ -1,0 +1,250 @@
+@import "_variables";
+
+.b-addresses-contacts {
+  $s: &;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    font-size: $font-size_h2m;
+    margin-bottom: 50px;
+  }
+
+  &__applications {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 40px;
+  }
+
+  &__map {
+    border-radius: $br-main;
+    width: 66%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    } 
+  }
+
+  &__contact {
+    width: 31%;
+    background-color: $major-light;
+    text-align: start;
+    padding: 25px 30px;
+    border-radius: $br-main;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    span {
+      font-weight: bold;
+      display: block;
+    }
+
+    a {
+      font-weight: bold;
+      color: black;
+      font-size: 20px;
+    }
+
+    span:nth-child(1) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+
+    a {
+      display: inline-block;
+      flex-grow: 1;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  &__item {
+    border-radius: $br-main;
+    background-color: $major-light;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+    position: relative;
+    z-index: 0;
+    
+    &:hover {
+      background-color: $light;
+
+      #{$s}__button {
+        background-color: $minor;
+      }
+    }
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__color {
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-image: url("/i/icon-metro.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  &__designation {
+    margin-bottom: 10px;
+
+    p:nth-child(1) {
+      font-weight: bold;
+      span {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-self: flex-start;
+    margin-top: auto;
+    border: none;
+    font-size: inherit;
+    background-color: $major;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: $br-main;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__line {
+    &--novye-cheryomushki #{$s}__color {
+      background-color: #FE8B4B;
+    }
+
+    &--voykovskaya #{$s}__color {
+      background-color: #13AB7B;
+    }
+
+    &--maryina-roshcha #{$s}__color {
+      background-color: #83E125;
+    }
+
+    &--kurskaya #{$s}__color {
+      position: relative;
+      margin-right: 60px;
+      background-color: #B97434;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0px;
+        left: 25px;
+        border-radius: 50%;
+        background-color: #83E125;
+        background-image: url("/i/icon-metro.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -10;
+      }
+  
+      &::after {
+        content: "";
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        top: 0px;
+        left: 50px;
+        border-radius: 50%;
+        background-color: #3D5CFF;
+        background-image: url("/i/icon-metro.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -20;
+      }
+    }
+
+    &--water-stadium #{$s}__color {
+      position: relative;
+      margin-right: 35px;
+      background-color: #13AB7B;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0px;
+        left: 25px;
+        border-radius: 50%;
+        background-color: $minor;
+        background-image: url("/i/icon-metro.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -10;
+      }
+
+    }
+
+    &--molodyozhnaya #{$s}__color {
+      background-color: #3D5CFF;
+    }
+
+    &--tekstilshchiki #{$s}__color {
+      background-color: #B557EE;
+    }
+
+    &--vdnx #{$s}__color  {
+      position: relative;
+      margin-right: 35px;
+      background-color: #FE8B4B;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0px;
+        left: 25px;
+        border-radius: 50%;
+        background-color: #FE8B4B;
+        background-image: url("/i/icon-metro.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -10;
+      }
+    }
+
+    &--sevastopol #{$s}__color {
+      background-color: #9C9C9C;
+    }
+
+    &--belorusskaya #{$s}__color {
+      background-color: #B97434;
+    }
+  }
+}

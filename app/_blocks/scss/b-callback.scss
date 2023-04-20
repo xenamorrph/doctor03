@@ -1,0 +1,96 @@
+@import "_variables";
+
+.b-callback {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__container {
+    background-color: $minor;
+    border-radius: $br-main;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &__content {
+    max-width: 60%;
+    color: white;
+    padding-left: 40px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    padding-top: 35px;
+  }
+
+  &__title h2, 
+  &__title h3, 
+  &__title h4  {
+    font-size: $font-size_h2;
+  }
+
+  &__form {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 25px;
+    padding-bottom: 40px;
+  }
+
+  &__input-name,
+  &__input-tel,
+  &__agreement, 
+  &__button {
+    width: 48%;
+    flex-grow: 1;
+  }
+
+  &__input-name input,
+  &__input-tel input{
+    width: 100%;
+  }
+
+  &__input-name input::placeholder,
+  &__input-tel input::placeholder {
+    color: black;
+  }
+  
+
+  &__input-name input,
+  &__input-tel input, 
+  &__button {
+    border-radius: $br-main;
+    border: none;
+    padding: 15px 25px;
+    background-color: white;
+    font-size: 18px;
+  }
+
+  
+  &__agreement {
+    padding-left: 25px;
+    
+    a {
+      color: inherit;
+    }
+  }
+  
+  &__button {
+    color: $minor;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: $light;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    border-radius: 0 $br-main $br-main 0;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}

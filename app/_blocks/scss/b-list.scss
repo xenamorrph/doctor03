@@ -1,0 +1,48 @@
+@import "_variables";
+
+.b-list {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    font-size: $font-size_h2m;
+    margin-bottom: 35px;
+    width: 70%;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    counter-reset: section;
+  }
+
+  &__item {
+    background-color: $major-light;
+    border-radius: $br-main;
+    padding: 25px 30px 15px 30px;
+    display: flex;
+  }
+
+  &__count {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: $major;
+    margin-right: 30px;
+
+    &::before {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      counter-increment: section;
+      content: counter(section) "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

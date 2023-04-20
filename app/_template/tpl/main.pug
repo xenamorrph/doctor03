@@ -1,0 +1,14 @@
+doctype html
+html(lang="ru")
+	head
+		include head
+		title
+			block title
+		block head
+	body
+		.wrapper.index-page
+			.wrapper__box
+				include /_template/pug/header
+				block content
+
+				include /_template/pug/footer

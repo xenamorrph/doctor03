@@ -1,0 +1,19 @@
+section.b-feedback-form
+  .container
+    .b-feedback-form__title
+      h2 Оставить отзыв
+    .b-feedback-form__container
+      form.b-feedback-form__form(action="" method="post")
+        .b-feedback-form__name
+          input(type="text" placeholder="Ваше имя")
+        .b-feedback-form__email
+          input(type="mail" placeholder="E-mail для ответа" required)
+        .b-feedback-form__text
+          textarea(type="textarea" placeholder="Ваш отзыв")
+        .b-feedback-form__agreement Нажимая на кнопку, вы даете согласие на <a href="#"> обработку своих персональных данных</a>
+        button(type="submit").b-feedback-form__button Оставить отзыв
+      .b-feedback-form__image
+        picture
+          img(src="/i/b-feedback-image.svg")
+
+          
